@@ -4,6 +4,7 @@
 [dev-redhat]
 testserver1
 testserver2
+
 [root@ansible-master ansible]#
 
 [root@ansible-master ansible]# ansible dev-redhat -m shell -a "uname -a;uptime"
