@@ -81,3 +81,27 @@ testserver2
 https://www.youtube.com/watch?v=7al0yehXa_g&t=420s
 '''
 
+# Commands to run for Demo
+
+* check which ansible distro present method1:
+- ansible -m setup all | grep ansible_distribution       # m=module
+
+* check which ansible distro present method2:
+- ansible -m ping all
+
+* Check the current kernel version of servers ()
+- ansible <group_name> -m shell -a "uname -a;uptime"        # <group name> = dev-redhat;    #  -a = specify which command to run (e.g uname, uptime)
+
+* check if any application process is running on servers:
+- ansible <group_name> -m shell -a "ps -eaf| grep http"
+
+* Run for patching with the ansible script:
+- ansible-playbook <file_name.yaml>
+
+* Stop application by running:
+- ansible <group_name> -l <server_A> -m shell -a "systemctl stop httpd.service"     # <server_A> =server name,  -l = limiting to a specific
+
+* Run for patching with the ansible script:
+- ansible-playbook <file_name.yaml>
+
+
