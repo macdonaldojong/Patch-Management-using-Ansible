@@ -76,3 +76,8 @@ testserver2
 
 
 [root@ansible-master ansible]#
+
+'''
+https://www.youtube.com/watch?v=7al0yehXa_g&t=420s
+'''
+
