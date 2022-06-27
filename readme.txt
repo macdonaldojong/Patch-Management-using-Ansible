@@ -1,5 +1,6 @@
-# Patching-with-Ansible
-
+*********************************************************************************************************
+Patching-with-Ansible
+*********************************************************************************************************
 [root@ansible-master ansible]# cat hosts
 [dev-redhat]
 testserver1
@@ -13,9 +14,8 @@ testserver2
 
 [root@ansible-master ansible]# cat linuxpatching.yml
 ---
+
 ## Demo Ansible Playbook to perform patching on RHEl/CentOS Server
-## For Demo Purpose only.. Use it at your own responsibility.
-## Can update it as per your requirements - Yogesh 27/12/2016
 
 - hosts: dev-redhat
   become_user: root
@@ -74,14 +74,9 @@ testserver2
           state=started
       when: reboot_started|changed
 
-
-[root@ansible-master ansible]#
-
-'''
-https://www.youtube.com/watch?v=7al0yehXa_g&t=420s
-'''
-
+*********************************************************************************************************
 # Commands to run for Demo
+*********************************************************************************************************
 
 * check which ansible distro present method1:
 - ansible -m setup all | grep ansible_distribution       # m=module
@@ -104,4 +99,6 @@ https://www.youtube.com/watch?v=7al0yehXa_g&t=420s
 * Run for patching with the ansible script:
 - ansible-playbook <file_name.yaml>
 
-
+*********************************************************************************************************
+https://www.youtube.com/watch?v=7al0yehXa_g&t=420s
+*********************************************************************************************************
