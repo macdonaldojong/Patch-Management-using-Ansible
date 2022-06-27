@@ -1,6 +1,5 @@
 # Patching-with-Ansible
 
-'''
 [root@ansible-master ansible]# cat hosts
 [dev-redhat]
 testserver1
@@ -73,6 +72,6 @@ testserver2
           timeout=300
           state=started
       when: reboot_started|changed
-'''
+
 
 [root@ansible-master ansible]#
